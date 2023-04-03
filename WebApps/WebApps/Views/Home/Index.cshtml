@@ -6,3 +6,14 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@foreach (var post in Model.posts)
+{
+    <div>
+        <h2>@post.Title</h2>
+        <p>@post.Content</p>
+        <p>Author: @post.Author</p>
+        <p>Date/Time: @post.DateTime</p>
+        <p>Likes: @post.Likes</p>
+    </div>
+}
